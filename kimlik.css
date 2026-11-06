@@ -1,0 +1,20 @@
+:root{--zemin:#0e1c22;--kart:#fff6e4;--yazi:#fdf3df;--soluk:#a9bcc0;--cizgi:#2a4148;--il:#1c3138;--il-sinir:#0e1c22;--secili:#ffb000;--giden:#ff7a2f;--gelen:#3fd6a5;--vurgu:#ffb000}
+body{font-family:Barlow,sans-serif;background:radial-gradient(90% 60% at 80% -10%,#23444d 0,transparent 70%),var(--zemin)}
+h1{font-family:Oswald,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.005em;font-size:clamp(52px,10vw,112px);line-height:.98}
+.ust-etiket{display:inline-block;background:var(--vurgu);color:#0e1c22;padding:5px 10px;letter-spacing:.14em;font-family:Oswald,sans-serif}
+select{background:#fff6e4;color:#0e1c22;border:0;font-weight:600}
+.secim label{color:var(--soluk)}
+.ozet .kutu{background:var(--kart);color:#14262c;border:0;border-radius:4px;position:relative;
+  -webkit-mask:radial-gradient(circle 8px at 0 50%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 8px at 100% 50%,transparent 98%,#000) right/51% 100% no-repeat;
+  mask:radial-gradient(circle 8px at 0 50%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 8px at 100% 50%,transparent 98%,#000) right/51% 100% no-repeat}
+.ozet .kutu b{font-family:Oswald,sans-serif;font-size:36px;letter-spacing:.01em}
+.ozet .kutu span{color:#55686d}
+.ozet .cumle{font-size:clamp(22px,2.8vw,30px)}
+.sekme{background:transparent;border-color:var(--cizgi)}
+.sekme button.secili{background:var(--vurgu);color:#0e1c22}
+h2{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.02em}
+h1{text-wrap:balance}
+.dip{border-top:1px solid var(--cizgi)}
+/*2*/
+h1{font-size:clamp(40px,11.5vw,112px)}
+@media(max-width:720px){.ozet .kutu b{font-size:24px}}
