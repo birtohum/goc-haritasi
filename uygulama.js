@@ -60,7 +60,7 @@ function harita(o) {
   const deg = yon === "giden" ? o.giden : o.gelen, top = yon === "giden" ? o.tg : o.ta;
   const enb = Math.max(...deg);
   const renk = getComputedStyle(document.documentElement).getPropertyValue(yon === "giden" ? "--giden" : "--gelen").trim();
-  [...s.querySelectorAll("path")].forEach((e) => {
+  [...s.querySelectorAll("path[data-i]")].forEach((e) => {
     const i = Number(e.dataset.i);
     e.classList.toggle("secili", i === il);
     const f = deg[i] / enb;
