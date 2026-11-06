@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memleketten kim gitti?</title>
+<meta name="description" content="TÜİK iller arası göç verisiyle 2008–2025: ilinden insanlar nereye gitti, nereden geldi? 81 il, 18 yıl.">
+<meta property="og:title" content="Memleketten kim gitti?">
+<meta property="og:description" content="81 il, 18 yıl iller arası göç. İlini seç: kim gitti, kim geldi, nereye.">
+<meta property="og:image" content="https://birtohum.github.io/goc-haritasi/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stil.css?v=1">
+</head>
+<body>
+<main>
+  <header class="ust">
+    <p class="ust-etiket">TÜİK · 2008–2025 · 81 il</p>
+    <h1>Memleketten<br>kim gitti?</h1>
+    <div class="secim">
+      <label><span>İl</span><select id="il"></select></label>
+      <label><span>Dönem</span><select id="donem"></select></label>
+    </div>
+  </header>
+
+  <section class="ozet" id="ozet" aria-live="polite"></section>
+
+  <section class="harita-kutu">
+    <div class="sekme" role="tablist">
+      <button id="sGiden" class="secili" role="tab" aria-selected="true">Gidenler nereye?</button>
+      <button id="sGelen" role="tab" aria-selected="false">Gelenler nereden?</button>
+    </div>
+    <svg id="harita" role="img" aria-label="Türkiye il haritası"></svg>
+    <div class="lejant" id="lejant"></div>
+  </section>
+
+  <section class="iki">
+    <div>
+      <h2 id="listeBaslik">En çok gidilen 10 il</h2>
+      <ol class="liste" id="liste"></ol>
+    </div>
+    <div>
+      <h2>Yıl yıl net göç</h2>
+      <p class="alt">Gelen eksi giden. Turuncu: il nüfus verdi; yeşil: aldı.</p>
+      <div id="yillar" class="yillar"></div>
+    </div>
+  </section>
+
+  <section class="blok">
+    <h2>Nüfusuna göre en çok göç veren ve alan iller</h2>
+    <p class="alt" id="siraAlt"></p>
+    <div class="iki">
+      <ol class="liste" id="verenler"></ol>
+      <ol class="liste" id="alanlar"></ol>
+    </div>
+  </section>
+
+  <footer class="dip">
+    <p><b>Veri:</b> TÜİK, Adrese Dayalı Nüfus Kayıt Sistemi, iller arası göç (<a href="https://nip.tuik.gov.tr/?value=IllerArasiGoc">Nüfus İstatistikleri Portalı</a>). Göç, kişinin kayıtlı yerleşim adresinin bir yıl içinde başka bir ile taşınmasıdır; adres değiştirmeden yaşanan taşınmalar, mevsimlik göç ve yurt dışı göç bu sayılarda yok. "Nüfusuna göre" oranlar ilin o yılki nüfusuna bölünerek hesaplandı.</p>
+    <p><b>Harita:</b> il sınırları <a href="https://www.geoboundaries.org/">geoBoundaries</a> (CC BY-SA 2.0, OpenStreetMap kaynaklı), sadeleştirildi. Oklar il merkezlerini birleştirir; yol değil, yönü gösterir.</p>
+    <p><a href="https://github.com/birtohum/goc-haritasi">Kaynak kodu</a> · <a href="https://birtohum.github.io/">birtohum</a></p>
+  </footer>
+</main>
+<script src="uygulama.js?v=1"></script>
+</body>
+</html>
